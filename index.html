@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" theme="light">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     </header>
     <main>
         <!-- main content container -->
-        <div class="flex flex-col md:flex-row gap-5">
+        <div class="flex flex-col lg:flex-row gap-5">
             <!-- shape card container -->
             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <!-- Triangle card -->
@@ -33,7 +33,7 @@
                             <span>cm</span>
                         </div>
                         <div class="py-5">
-                            <p class="text-2xl">Area: <span id="triangle-area"></span> <span>cm<sup>2</sup></span></p>
+                            <p class="text-2xl">Area: <span id="triangle-area">0</span> <span>cm<sup>2</sup></span></p>
                         </div>
                         <div class="card-actions">
                             <button onclick="calculateTriangleArea()" class="btn btn-primary w-full absolute bottom-0 left-0">Calculate</button>
@@ -55,7 +55,7 @@
                             <span>cm</span>
                         </div>
                         <div class="py-5">
-                            <p class="text-2xl">Area: <span id="rectangle-area"></span> <span>cm<sup>2</sup></span></p>
+                            <p class="text-2xl">Area: <span id="rectangle-area">0</span> <span>cm<sup>2</sup></span></p>
                         </div>
                         <div class="card-actions">
                             <button onclick="calculateRectangleArea()" class="btn btn-primary w-full absolute bottom-0 left-0">Calculate</button>
@@ -77,7 +77,7 @@
                             <span>cm</span>
                         </div>
                         <div class="py-5">
-                            <p class="text-2xl">Area: <span id="parallelogram-area"></span> <span>cm<sup>2</sup></span></p>
+                            <p class="text-2xl">Area: <span id="parallelogram-area">0</span> <span>cm<sup>2</sup></span></p>
                         </div>
                         <div class="card-actions">
                             <button onclick="calculateParallelogramArea()" class="btn btn-primary w-full absolute bottom-0 left-0">Calculate</button>
@@ -99,7 +99,7 @@
                             <span>cm</span>
                         </div>
                         <div class="py-5">
-                            <p class="text-2xl">Area: <span id="rhombus-area"></span> <span>cm<sup>2</sup></span></p>
+                            <p class="text-2xl">Area: <span id="rhombus-area">0</span> <span>cm<sup>2</sup></span></p>
                         </div>
                         <div class="card-actions">
                             <button onclick="calculateRhombusArea()" class="btn btn-primary w-full absolute bottom-0 left-0">Calculate</button>
@@ -121,7 +121,7 @@
                             <span>cm</span>
                         </div>
                         <div class="py-5">
-                            <p class="text-2xl">Area: <span id="pentagon-area"></span> <span>cm<sup>2</sup></span></p>
+                            <p class="text-2xl">Area: <span id="pentagon-area">0</span> <span>cm<sup>2</sup></span></p>
                         </div>
                         <div class="card-actions">
                             <button onclick="calculatePentagonArea()" class="btn btn-primary w-full absolute bottom-0 left-0">Calculate</button>
@@ -143,7 +143,7 @@
                             <span>cm</span>
                         </div>
                         <div class="py-5">
-                            <p class="text-2xl">Area: <span id="ellipse-area"></span> <span>cm<sup>2</sup></span></p>
+                            <p class="text-2xl">Area: <span id="ellipse-area">0</span> <span>cm<sup>2</sup></span></p>
                         </div>
                         <div class="card-actions">
                             <button onclick="calculateEllipseArea()" class="btn btn-primary w-full absolute bottom-0 left-0">Calculate</button>
@@ -152,8 +152,16 @@
                 </div>
             </div>
             <!-- Area calculation container -->
-            <div class="hidden lg:flex w-1/4 border-2 border-gray-700 rounded-md">
-                <h3 class="text-3xl text-center p-4">Area calculation</h3>
+            <div class="w-full lg:w-1/4 border-2 border-gray-700 rounded-md">
+                <h3 class="text-3xl font-semibold text-center p-4">Area calculation</h3>
+                <div class="p-5 space-y-2">
+                    <p class="text-xl">Triangle: <span id="triangle-calc">0</span> <span>cm<sup>2</sup></span></p>
+                    <p class="text-xl">Rectangle: <span id="rectangle-calc">0</span> <span>cm<sup>2</sup></span></p>
+                    <p class="text-xl">Parallelogram: <span id="parallelogram-calc">0</span> <span>cm<sup>2</sup></span></p>
+                    <p class="text-xl">Rhombus: <span id="rhombus-area">0</span> <span>cm<sup>2</sup></span></p>
+                    <p class="text-xl">Pentagon: <span id="pentagon-calc">0</span> <span>cm<sup>2</sup></span></p>
+                    <p class="text-xl">Ellipse: <span id="ellipse-calc">0</span> <span>cm<sup>2</sup></span></p>
+                </div>
             </div>
         </div>
     </main>

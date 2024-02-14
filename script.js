@@ -7,6 +7,7 @@ function calculateTriangleArea(){
     const calculateArea =  0.5 * triangleBase * triangleHeight;
    
     setInnerTextById('triangle-area', calculateArea);
+    setInnerTextById('triangle-calc', calculateArea);
 }
 
 // calculate Rectangle Area
@@ -18,6 +19,7 @@ function calculateRectangleArea(){
     const calculateRectangle = rectangleWidth * rectangleLength;
 
     setInnerTextById('rectangle-area', calculateRectangle)
+    setInnerTextById('rectangle-calc', calculateRectangle)
 
 }
 
@@ -29,6 +31,7 @@ function calculateParallelogramArea(){
     const calculateParallelogram = parallelogramBase * parallelogramHeight;
 
     setInnerTextById('parallelogram-area', calculateParallelogram);
+    setInnerTextById('parallelogram-calc', calculateParallelogram);
 }
 
 // calculate Rhombus Area
@@ -40,6 +43,7 @@ function calculateRhombusArea(){
     const rhombusArea = 0.5 * rhombusBase * rhombusHeight;
 
     setInnerTextById('rhombus-area', rhombusArea);
+    setInnerTextById('rhombus-calc', rhombusArea);
 }
 
 // calculate pentagon Area
@@ -52,6 +56,7 @@ function calculatePentagonArea(){
     const pentagonArea = 0.5 * pentagonPerimeter * pentagonApothem;
 
     setInnerTextById('pentagon-area', pentagonArea);
+    setInnerTextById('pentagon-calc', pentagonArea);
 }
 
 
@@ -63,6 +68,7 @@ function calculateEllipseArea(){
 
     const ellipseArea = 3.24 * majorRadius * minorRadius;
     setInnerTextById('ellipse-area', ellipseArea);
+    setInnerTextById('ellipse-calc', ellipseArea);
 }
 
 // get Inpu tValue
@@ -71,6 +77,7 @@ function getInputValueById(inputFieldId){
     const inputField = document.getElementById(inputFieldId);
     const inputFieldText = inputField.value;
     const value = parseFloat(inputFieldText);
+    inputField.value = '';
     return value;
 }
 
