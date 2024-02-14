@@ -71,13 +71,17 @@ function calculateEllipseArea(){
     setInnerTextById('ellipse-calc', ellipseArea);
 }
 
-// get Inpu tValue
+// get Input tValue
 
 function getInputValueById(inputFieldId){
     const inputField = document.getElementById(inputFieldId);
     const inputFieldText = inputField.value;
     const value = parseFloat(inputFieldText);
+    
     inputField.value = '';
+    if( typeof value !== 'number' || isNaN(value)){
+        return alert('Please provide a number')
+    }
     return value;
 }
 
